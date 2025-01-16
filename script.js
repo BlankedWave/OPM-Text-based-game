@@ -1,20 +1,21 @@
-// Load the YouTube IFrame API asynchronously
+// Declare a global variable to hold the player instance
+var player;
+
+// This function will be called when the YouTube API is ready
 function onYouTubeIframeAPIReady() {
-  var iframe = document.getElementById('video');
-  var player = new YT.Player(iframe, {
+  player = new YT.Player('video-iframe', {
+    videoId: 'rBxzqne_gWg', // Video ID of the YouTube video
     events: {
-      'onReady': function(event) {
-        event.target.setVolume(30); // Set volume to 30%
-      }
+      'onReady': onPlayerReady
     }
   });
 }
 
-// The script tag to load the YouTube API
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// When the player is ready, set the volume
+function onPlayerReady(event) {
+  event.target.setVolume(30); // Set volume to 30
+}
+
 
 const storyData = [
     {
