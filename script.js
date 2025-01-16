@@ -97,7 +97,6 @@ const storyData = [
             { text: "Team up with Genos to fight Boros", next: 27 }
         ]
     },
-    // Add more scenarios as needed
   {
         text: "You receive a mysterious phone call. It's from an unknown person who claims to know about your weakness. Do you listen?",
         choices: [
@@ -320,7 +319,7 @@ const storyData = [
             { text: "Decline and focus on your own missions", next: 109 },
             { text: "Attend, but secretly look for a way to outshine everyone", next: 110 }
         ]
-    }
+    }    // Add more scenarios as needed
     
 ];
 
