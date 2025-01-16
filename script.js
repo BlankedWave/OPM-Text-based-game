@@ -1,20 +1,3 @@
-// Declare a global variable to hold the player instance
-var player;
-
-// This function will be called when the YouTube API is ready
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('video-iframe', {
-    videoId: 'rBxzqne_gWg', // Video ID of the YouTube video
-    events: {
-      'onReady': onPlayerReady
-    }
-  });
-}
-
-// When the player is ready, set the volume
-function onPlayerReady(event) {
-  event.target.setVolume(30); // Set volume to 30
-}
 
 
 const storyData = [
