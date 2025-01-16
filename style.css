@@ -45,23 +45,3 @@ button:hover {
     background-color: #ff5e00;
 }
 
-/* Footer Styles */
-#footer {
-    position: fixed;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 1em;
-    animation: fadeIn 3s ease-in-out;
-}
-
-/* Fade-In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
