@@ -76,7 +76,7 @@ const storyData = [
         text: "You take on another mission to eliminate a group of mutants. The mission is completed swiftly, and you return to the Association, feeling as if you need a real challenge.",
         choices: [
             { text: "Request a higher-level mission", next: 23 },
-            { text: "Go home and relax", next: 9 }
+            { text: "Go home and relax", next: 0 }
         ]
     },
     {
