@@ -1,4 +1,4 @@
-# Saitama Text Adventure Game
+# One Punch Man Text Based-Game
 
 ## Overview
 This is a text-based adventure game where you play as Saitama, the one-punch hero from "One Punch Man." Navigate through various scenarios, make decisions, and explore a world where your overwhelming strength leads to interesting challenges. Will you train, fight monsters, or mentor fellow heroes? The choice is yours!
