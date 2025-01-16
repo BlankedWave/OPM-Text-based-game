@@ -1,3 +1,21 @@
+// Load the YouTube IFrame API asynchronously
+function onYouTubeIframeAPIReady() {
+  var iframe = document.getElementById('video');
+  var player = new YT.Player(iframe, {
+    events: {
+      'onReady': function(event) {
+        event.target.setVolume(30); // Set volume to 30%
+      }
+    }
+  });
+}
+
+// The script tag to load the YouTube API
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 const storyData = [
     {
         text: "You are Saitama, the hero who can defeat anyone with a single punch. You're feeling bored. What do you want to do today?",
@@ -134,6 +152,125 @@ const storyData = [
             { text: "Leave him to train alone", next: 9 }
         ]
     },
+    {
+    "text": "You continue training Mumen Rider, helping him improve his form and techniques. After several days of training, he starts to make significant progress.",
+    "choices": [
+        { "text": "Encourage Mumen Rider to keep improving", "next": 17 },
+        { "text": "Leave him to train alone", "next": 9 }
+    ]
+},
+{
+    "text": "Mumen Rider thanks you for the help and tells you he feels stronger. He expresses a desire to take on tougher challenges. What do you say?",
+    "choices": [
+        { "text": "Support his decision to fight stronger foes", "next": 18 },
+        { "text": "Encourage him to stick to his current path", "next": 19 },
+        { "text": "Tell him to focus on his training first", "next": 20 }
+    ]
+},
+{
+    "text": "You support Mumen Rider's decision to face tougher enemies. He smiles, determined to prove that even without powers, he can be a hero.",
+    "choices": [
+        { "text": "Visit the Hero Association for a new mission", "next": 1 },
+        { "text": "Go to a training spot to help Mumen Rider prepare", "next": 8 }
+    ]
+},
+{
+    "text": "Mumen Rider decides to focus on improving his skills and asks you for more training tips. You decide to train him on advanced combat techniques.",
+    "choices": [
+        { "text": "Teach Mumen Rider your most advanced move", "next": 21 },
+        { "text": "Give him general advice on stamina and endurance", "next": 22 }
+    ]
+},
+{
+    "text": "You teach Mumen Rider your most advanced move. He struggles but starts to get the hang of it. After training for hours, he seems more confident.",
+    "choices": [
+        { "text": "Send him to fight some small-time villains to practice", "next": 23 },
+        { "text": "Take a break and relax together", "next": 9 }
+    ]
+},
+{
+    "text": "You send Mumen Rider to fight small-time villains to put his new skills to the test. He successfully defeats them and reports back to you with pride.",
+    "choices": [
+        { "text": "Encourage him to keep pushing forward", "next": 24 },
+        { "text": "Rest and regroup before the next challenge", "next": 9 }
+    ]
+},
+{
+    "text": "Mumen Rider thanks you for your help and prepares to take on bigger threats. You feel proud of how far he’s come.",
+    "choices": [
+        { "text": "Send Mumen Rider on a tougher mission", "next": 25 },
+        { "text": "Relax and go on a mission yourself", "next": 1 }
+    ]
+},
+{
+    "text": "You decide to take on a mission yourself and head to the Hero Association. There’s a new assignment for you that requires a high level of skill.",
+    "choices": [
+        { "text": "Accept the mission", "next": 26 },
+        { "text": "Decline and go home", "next": 9 }
+    ]
+},
+{
+    "text": "You accept the mission and set off to defeat the latest threat. It’s a high-level monster causing havoc in the city, but you're ready for the challenge.",
+    "choices": [
+        { "text": "Defeat the monster with a single punch", "next": 27 },
+        { "text": "Take your time and enjoy the battle", "next": 28 }
+    ]
+},
+{
+    "text": "You defeat the monster with a single punch. The Hero Association congratulates you on another successful mission, but you can’t shake the feeling of emptiness.",
+    "choices": [
+        { "text": "Request a mission that actually challenges you", "next": 29 },
+        { "text": "Go home and relax", "next": 9 }
+    ]
+},
+{
+    "text": "You request a higher-level mission, but the Hero Association suggests you take a break first. You can sense they're concerned about your mental state.",
+    "choices": [
+        { "text": "Take a break and relax", "next": 9 },
+        { "text": "Push for a more challenging mission", "next": 30 }
+    ]
+},
+{
+    "text": "You push for a more challenging mission, and the Hero Association reluctantly agrees. You prepare for an intense fight that might finally provide the challenge you seek.",
+    "choices": [
+        { "text": "Accept the challenge and head out", "next": 31 },
+        { "text": "Wait for the mission to come to you", "next": 9 }
+    ]
+},
+{
+    "text": "You accept the challenge and head out. The mission turns out to be the hardest one you've faced in a while, but it’s exactly what you needed.",
+    "choices": [
+        { "text": "Defeat the foe with your usual strength", "next": 32 },
+        { "text": "Try out a new technique you've been practicing", "next": 33 }
+    ]
+},
+{
+    "text": "After defeating the tough foe, you return to the Hero Association, having found the challenge you were looking for. The mission has ended, and you finally feel fulfilled.",
+    "choices": [
+        { "text": "Reflect on your journey", "next": 34 },
+        { "text": "Take some time off to rest", "next": 9 }
+    ]
+},
+{
+    "text": "You reflect on your journey. Despite all your overwhelming strength, it’s not just the battles that make a hero, but the bonds you create along the way.",
+    "choices": [
+        { "text": "Continue helping others in your own way", "next": 35 },
+        { "text": "Return to your training to perfect yourself further", "next": 36 }
+    ]
+},
+{
+    "text": "You decide to continue helping others in your own way, realizing that being a hero isn’t always about fighting monsters. Your journey as Saitama has reached a new understanding of what it means to be truly strong.",
+    "choices": [
+        { "text": "Live a peaceful life as a hero", "next": 37 }
+    ]
+},
+{
+    "text": "You return to your training, seeking even greater perfection. The hero's path is never truly finished, and you are determined to always become the best version of yourself.",
+    "choices": [
+        { "text": "Continue your endless training", "next": 38 }
+    ]
+}
+
 ];
 
 
