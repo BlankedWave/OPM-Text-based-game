@@ -323,30 +323,30 @@ const storyData = [
     
 ];
 
-function displayStory() {
-    storyText.innerHTML = storyData[storyIndex].text;
-    choicesDiv.innerHTML = "";
+function updateStory() {
+    // Set the story text
+    storyText.textContent = storyData[storyIndex].text;
 
+    // Clear previous choices
+    choicesDiv.innerHTML = '';
+
+    // Add new choices
     storyData[storyIndex].choices.forEach(choice => {
-        let button = document.createElement("button");
-        button.innerHTML = choice.text;
-        button.onclick = () => {
+        let choiceButton = document.createElement("button");
+        choiceButton.textContent = choice.text;
+        choiceButton.onclick = function() {
             storyIndex = choice.next;
-            displayStory();
+            updateStory();  // Call updateStory to update text and choices
         };
-        choicesDiv.appendChild(button);
+        choicesDiv.appendChild(choiceButton);
     });
 }
 
-function nextStory() {
-    storyIndex++;
-    if (storyIndex < storyData.length) {
-        displayStory();
-    } else {
-        storyText.innerHTML = "The adventure has ended! Thank you for playing.";
-        choicesDiv.innerHTML = "";
-        nextButton.style.display = 'none';
-    }
-}
+// Initialize the game
+nextButton.onclick = function() {
+    storyIndex = 0;  // Start the game from the beginning
+    updateStory();
+};
 
-displayStory();
+// Initial call to start the game
+updateStory();
